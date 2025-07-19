@@ -1,0 +1,52 @@
+body {
+  background: black;
+  color: white;
+  font-family: 'Courier New', monospace;
+  padding: 1em;
+  text-align: center;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background: #111;
+  color: #0f0;
+  font-family: monospace;
+}
+
+button {
+  background: #f0f;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.glitch {
+  font-size: 2em;
+  position: relative;
+  color: white;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 98% 0); transform: translate(0, 0); }
+  10% { clip-path: inset(80% 0 10% 0); transform: translate(-5px, 0); }
+  20% { clip-path: inset(60% 0 30% 0); transform: translate(3px, 0); }
+  30% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 0); }
+  40% { clip-path: inset(20% 0 70% 0); transform: translate(4px, 0); }
+  50% { clip-path: inset(0 0 90% 0); transform: translate(-5px, 0); }
+  100% { clip-path: inset(0 0 98% 0); transform: translate(0, 0); }
+}
+
+.post {
+  border: 1px dashed #0ff;
+  margin: 10px 0;
+  padding: 10px;
+  background: #222;
+  animation: glitch 1s ease-in-out infinite alternate;
+}
