@@ -1,21 +1,34 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Red social con estética glitch, funcional en Render y visible por bots.">
   <title>Glitch Social</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="glitch">Glitch Social</h1>
+  <header>
+    <h1 class="glitch">Glitch Social</h1>
+    <nav>
+      <a href="/login">Iniciar Sesión</a>
+      <a href="/register">Regístrate</a>
+    </nav>
+  </header>
 
-  <form action="/post" method="POST">
-    <input type="text" name="user" placeholder="Tu nombre" required>
-    <textarea name="content" placeholder="Escribe algo glitch..." required></textarea>
-    <button type="submit">Glitch It!</button>
-  </form>
+  <main>
+    <section id="create-post">
+      <h2>Crear Publicación</h2>
+      <form id="post-form">
+        <input type="text" id="username" placeholder="Tu nombre" required>
+        <textarea id="content" placeholder="Escribe algo glitch..." required></textarea>
+        <button type="submit">Glitch It!</button>
+      </form>
+    </section>
 
-  <h2>Publicaciones</h2>
-  <div id="feed"></div>
+    <section id="feed"></section>
+  </main>
 
   <script src="script.js"></script>
 </body>
