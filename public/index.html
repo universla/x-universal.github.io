@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glitch Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="glitch">Glitch Social</h1>
+
+  <form action="/post" method="POST">
+    <input type="text" name="user" placeholder="Tu nombre" required>
+    <textarea name="content" placeholder="Escribe algo glitch..." required></textarea>
+    <button type="submit">Glitch It!</button>
+  </form>
+
+  <h2>Publicaciones</h2>
+  <div id="feed"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
