@@ -1,9 +1,27 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background: black;
   color: white;
-  font-family: 'Courier New', monospace;
+  font-family: monospace;
   padding: 1em;
   text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #000;
+  border-bottom: 2px dashed #0ff;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 input, textarea {
@@ -24,10 +42,10 @@ button {
   border: none;
   margin-bottom: 20px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .glitch {
-  font-size: 2em;
   position: relative;
   color: white;
   animation: glitch 2s infinite;
@@ -45,8 +63,10 @@ button {
 
 .post {
   border: 1px dashed #0ff;
-  margin: 10px 0;
+  margin: 20px auto;
   padding: 10px;
   background: #222;
+  text-align: left;
+  max-width: 500px;
   animation: glitch 1s ease-in-out infinite alternate;
 }
