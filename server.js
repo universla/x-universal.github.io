@@ -1,11 +1,13 @@
 
-const express = require('express');
+// server.js
+import express from 'express';
+import path from 'path';
+import { lowdb } from 'lowdb';
+import FileSync from 'lowdb/adapters/FileSync';
+
 const app = express();
-const path = require('path');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('db.json');
-const db = low(adapter);
+const db = lowdb(adapter);
 
 // Inicializar base de datos
 db.defaults({ users: [], posts: [] }).write();
