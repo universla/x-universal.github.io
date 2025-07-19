@@ -1,18 +1,33 @@
-// Cargar publicaciones desde el backend
-async function loadPosts() {
-  const res = await fetch('/posts');
-  const posts = await res.json();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('post-form');
   const feed = document.getElementById('feed');
-  feed.innerHTML = '';
 
-  posts.forEach(p => {
-    const div = document.createElement('div');
-    div.className = 'post';
-    div.innerHTML = `<strong>${p.user}</strong>:<br>${p.content}`;
-    feed.appendChild(div);
+  async function loadPosts() {
+    const res = await fetch('/posts');
+    const posts = await res.json();
+    feed.innerHTML = '';
+    posts.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'post glitch';
+      div.innerHTML = `<strong>${p.user}</strong>:<br>${p.content}`;
+      feed.appendChild(div);
+    });
+  }
+
+  form?.addEventListener('submit', async e => {
+    e.preventDefault();
+    const user = document.getElementById('username').value;
+    const content = document.getElementById('content').value;
+    await fetch('/post', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user, content })
+    });
+    loadPosts();
+    form.reset();
   });
-}
 
-// Cargar publicaciones cada 5 segundos
-setInterval(loadPosts, 5000);
-loadPosts();
+  loadPosts();
+  setInterval(loadPosts, 5000);
+});
