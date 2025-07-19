@@ -3,10 +3,10 @@
 import express from 'express';
 import path from 'path';
 import { lowdb } from 'lowdb';
-import JSONFile from 'lowdb/adapters/JSONFile';
+import FileSync from 'lowdb/adapters/FileSync';
 
 const app = express();
-const adapter = new JSONFile('db.json');
+const adapter = new FileSync('db.json');
 const db = lowdb(adapter);
 
 // Inicializar base de datos
