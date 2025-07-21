@@ -1,5 +1,9 @@
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background: black;
@@ -7,21 +11,6 @@ body {
   font-family: monospace;
   padding: 1em;
   text-align: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: #000;
-  border-bottom: 2px dashed #0ff;
-}
-
-nav a {
-  color: #0ff;
-  text-decoration: none;
-  margin-left: 10px;
 }
 
 input, textarea {
