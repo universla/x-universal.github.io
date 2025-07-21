@@ -2,12 +2,11 @@
 {
   "name": "glitch-social",
   "version": "1.0.0",
-  "description": "Red social con estética glitch, funcional en Render y GitHub",
+  "description": "Red social glitch funcional en móviles y Render",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "type": "module",
   "dependencies": {
     "express": "^4.18.2",
     "lowdb": "^5.0.0",
